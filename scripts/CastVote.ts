@@ -11,7 +11,7 @@ async function main()
     if (!parameters || parameters.length < 2)
     throw new Error("Parameters not provided");
     const contractAddress = parameters[0];
-    const myOtherParameter = parameters[1];
+    const proposlaNumber = parameters[1];
 
     // Configuring the wallet
     const provider = new ethers.JsonRpcProvider(process.env.RPC_ENDPOINT_URL ?? "");
@@ -27,7 +27,7 @@ async function main()
     // Attaching the smart contract using Typechain
     const ballotFactory = new Ballot__factory(wallet);
     const ballotContract = await ballotFactory.attach(contractAddress) as Ballot;
-    const tx = ballotContract.vote(myOtherParameter);
+    const tx = ballotContract.vote(proposlaNumber);
     const receipt = await (await tx).wait();
     console.log(`Transaction completed ${receipt?.hash}`)
           // TODO
