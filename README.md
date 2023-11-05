@@ -1,4 +1,17 @@
-# Ballot.sol writing scripts task 
-WEEK 2 of the Encode Solidity Bootcamp. Homework task described as: 
+# Week-2 Weekend Project
 
-Develop and run scripts for “Ballot.sol” within your group to give voting rights, casting votes, delegating votes and querying results. Write a report with each function execution and the transaction hash, if successful, or the revert reason, if failed.
+This document forms part of the week 2 weekend project for the Solidity Bootcamp. 
+
+Members from Team 2 who worked on this project: Ignas Apšega, Lyle Davids, Wendwossen Dufera and Cameron Mcewan
+
+For week 2, we developed and ran scripts for “Ballot.sol”  to give voting rights, casting votes, delegating votes and querying results. 
+
+## Feedback
+
+### Ignas Apšega
+
+### Lyle Davids
+
+### Wendwossen Dufera
+
+### Cameron McEwan
