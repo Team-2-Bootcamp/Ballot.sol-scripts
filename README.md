@@ -11,6 +11,11 @@ For week 2, we developed and ran scripts for “Ballot.sol”  to give voting ri
 ### Ignas Apšega
 
 ### Lyle Davids
+* **Deployment**: Deployed to Sepolia Testnet [TX Hash](https://sepolia.etherscan.io/tx/0x1bb3af11b16cb3ed3b05d633cd0e4b8cc3c8b0f726c1c76701d3401262b2651d)
+* **Voting**: Successfully voted for Proposal 1, the first proposal in the index[0] [TX Hash](https://sepolia.etherscan.io/tx/0x724009f96cbdb1d77ea187e94c69d5b794ff3e4e36beb8582b0dddd3e8a3a8d2), Tried to vote again but this was reverted because I already voted
+* **Delegate**: Tried to delegate my vote to a second address but transaction was reverted because I already voted
+* **Right to vote**: As a deployer, I was also the chairperson. Gave voting rights to Wendwossen [TX Hash](https://sepolia.etherscan.io/tx/0x79c9f36abe05e1912eae4acbecc657e2694de76763a6f1f5e4489158dd0448ef)
+* **Winning Proposal**: At the time of writing Proposal 1 was the winning vote
 
 ### Wendwossen Dufera
 I [deployed](https://sepolia.etherscan.io/tx/0xe9d30b7f1a079bedccc1beec13496f4cc62606f344decba2d66ca7900fe5f060) the Ballot smart contract and interacted with the following functions:
