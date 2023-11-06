@@ -7,8 +7,8 @@ const PROPOSALS = ["Proposal 1", "Proposal 2", "Proposal 3"]
 
 
 async function deployContract() {
-  // TODO
   const signers = await ethers.getSigners();
+
   const contractFactory = await ethers.getContractFactory("Ballot");
   const proposals = PROPOSALS.map(ethers.encodeBytes32String);
   const ballotContract = await contractFactory.deploy(proposals);
@@ -21,7 +21,16 @@ describe("Ballot", async () => {
 
   describe("when the contract is deployed", async () => {
     it("has the provided proposals", async () => {
-      // TODO
+        const {ballotContract} = await loadFixture(deployContract);
+        for (let index = 0; index < PROPOSALS.length; index++) {
+          const proposal = await ballotContract.proposals(index);
+          expect(ethers.decodeBytes32String(proposal.name)).to.eq(
+            PROPOSALS[index]
+          );
+        }
+    });
+  
+    it("has zero votes for all proposals", async () => {
       const {ballotContract} = await loadFixture(deployContract);
       for (let index = 0; index < PROPOSALS.length; index++) {
         const proposal = await ballotContract.proposals(index);
@@ -29,36 +38,34 @@ describe("Ballot", async () => {
           0
         );
       }
-    });
-  
-    it("has zero votes for all proposals", async () => {
-      // TODO
-      throw Error("Not implemented");
-    });
+  });
+
     it("sets the deployer address as chairperson", async () => {
-      // TODO
-      const {signers, ballotContract} = await loadFixture(deployContract);
-      const deployerAddress = signers[0].address;
-      const chairpersonAddress = await ballotContract.chairperson();
-      expect(deployerAddress).to.eq(chairpersonAddress);
+        const {signers, ballotContract} = await loadFixture(deployContract);
+        const deployerAddress = signers[0].address;
+        const chairpersonAddress = await ballotContract.chairperson();
+        expect(deployerAddress).to.eq(chairpersonAddress); 
     });
+
     it("sets the voting weight for the chairperson as 1", async () => {
-      // TODO
-      throw Error("Not implemented");
+        const {ballotContract} = await loadFixture(deployContract);
+        const chairpersonAddress = await ballotContract.chairperson();
+        const chairpersonVoter = await ballotContract.voters(chairpersonAddress);
+        expect(chairpersonVoter.weight).to.eq(1);
     });
   });
 
   describe("when the chairperson interacts with the giveRightToVote function in the contract", async () => {
     it("gives right to vote for another address", async () => {
-      const {ballotContract, signers} = await loadFixture(deployContract);
-      const voterBefore = await ballotContract.voters(signers[1].address);
-      expect(voterBefore.weight).to.eq(0);
-      const tx = await ballotContract.giveRightToVote(signers[1].address);
-      await tx.wait();
-      const voterAfter = await ballotContract.voters(signers[1].address);
-      expect(voterAfter.weight).to.eq(1);
-
+        const {ballotContract, signers} = await loadFixture(deployContract);
+        const voteBefore = await ballotContract.voters(signers[1].address);
+        expect(voteBefore.weight).to.eq(0);
+        const tx = await ballotContract.giveRightToVote(signers[1].address);
+        await tx.wait();
+        const voteAfter = await ballotContract.voters(signers[1].address);
+        expect(voteAfter.weight).to.eq(1);
     });
+
     it("can not give right to vote for someone that has voted", async () => {
       // TODO
       throw Error("Not implemented");
