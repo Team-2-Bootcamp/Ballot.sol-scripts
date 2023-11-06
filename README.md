@@ -10,9 +10,9 @@ For week 2, we developed and ran scripts for “Ballot.sol”  to give voting ri
 
 ### Ignas Apšega
 * **Deployment**: I deployed smart contract with proposal1 proposal2 proposal3 [TX Hash](https://sepolia.etherscan.io/tx/0xc4c1dcf8fcd78d0cda5194c0d2a14a7ee87a5de9b2cfcb0cb21763ac16fe546b)
-* **Voting**: Voted for Proposal 2 [TX Hash](https://sepolia.etherscan.io/tx/0x986fabbe88970ae0310ea9ac83216d916d89641efe31d0d64ac6098648f4ede2)
+* **Voting**: Voted for proposal2 [TX Hash](https://sepolia.etherscan.io/tx/0x986fabbe88970ae0310ea9ac83216d916d89641efe31d0d64ac6098648f4ede2)
 * **Delegate**: I tried to delegate the vote to the same wallet adress I used to deploy the smart contract however I got reverted with "You already voted."
-* **Right to vote**: I tried giving rights to Lyle but got reverted and it succeeded [TX Hash](https://sepolia.etherscan.io/tx/0x6152b49ff5cb5003f145a1ecd8672bf7c3d5c26db960c404c525ba5d646af891)
+* **Right to vote**: I tried giving rights to Lyle and it succeeded [TX Hash](https://sepolia.etherscan.io/tx/0x6152b49ff5cb5003f145a1ecd8672bf7c3d5c26db960c404c525ba5d646af891)
 * **Winning Proposal**: proposal2 was the winning vote
 
 ### Lyle Davids
