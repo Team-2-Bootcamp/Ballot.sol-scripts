@@ -9,11 +9,11 @@ For week 2, we developed and ran scripts for “Ballot.sol”  to give voting ri
 ## Feedback
 
 ### Ignas Apšega
-* **Deployment**: I deployed smart contract with proposal1 proposal2 proposal3 [TX Hash](https://sepolia.etherscan.io/tx/0xf191d3f1d71e2de012d06332d0b0c5b33e4cf0bdc38c3175be1646baf0ef809b)
-* **Voting**: Voted for Proposal 2 [TX Hash](https://sepolia.etherscan.io/tx/0x23078699d89a4714fe85ac365d01b187287776b2da4e6c87902ba6defe323a29)
-* **Delegate**: I tried to delegate the vote to the same wallet adress I used to deploy the smart contract however I got reverted with "You have no right to vote"
-* **Right to vote**: I tried giving rights to Lyle but got reverted 'Only chairperson can give right to vote'
-* **Winning Proposal**: Proposal2 was the winning vote
+* **Deployment**: I deployed smart contract with proposal1 proposal2 proposal3 [TX Hash](https://sepolia.etherscan.io/tx/0xc4c1dcf8fcd78d0cda5194c0d2a14a7ee87a5de9b2cfcb0cb21763ac16fe546b)
+* **Voting**: Voted for Proposal 2 [TX Hash](https://sepolia.etherscan.io/tx/0x986fabbe88970ae0310ea9ac83216d916d89641efe31d0d64ac6098648f4ede2)
+* **Delegate**: I tried to delegate the vote to the same wallet adress I used to deploy the smart contract however I got reverted with "You already voted."
+* **Right to vote**: I tried giving rights to Lyle but got reverted and it succeeded [TX Hash](https://sepolia.etherscan.io/tx/0x6152b49ff5cb5003f145a1ecd8672bf7c3d5c26db960c404c525ba5d646af891)
+* **Winning Proposal**: proposal2 was the winning vote
 
 ### Lyle Davids
 * **Deployment**: Deployed to Sepolia Testnet [TX Hash](https://sepolia.etherscan.io/tx/0x1bb3af11b16cb3ed3b05d633cd0e4b8cc3c8b0f726c1c76701d3401262b2651d)
